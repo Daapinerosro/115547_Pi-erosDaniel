@@ -1,4 +1,4 @@
-nombre=str(input("favor escriba dos nombres"))
+nombre=(input("favor escriba dos nombres"))
 nom= nombre.upper().lower()
 
 def ordenar_lista_cadenas(L):
