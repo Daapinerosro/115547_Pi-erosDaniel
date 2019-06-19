@@ -1,0 +1,14 @@
+import numpy 
+
+r1=int(input("Numero de renglones de la Matriz"))
+c1=int(input("Numero de Columnas de la matriz"))
+matriz=numpy.zeros((r1,c1))
+mat=numpy.zeros((r1,c1))
+for r in range(0,r1):
+    for c in range(0,c1):
+        a=input("Elemeto a("+str(r+1)+str(c+1)+"]")
+        matriz[r,c]=a
+        mat[c,r]=a
+print(matriz) 
+print(mat)
+
