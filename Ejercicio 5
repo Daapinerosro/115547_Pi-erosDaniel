@@ -1,0 +1,52 @@
+
+
+
+print("Leer un número entero y determinar el número \
+      de cincos que están consecutivos en un número.")
+ent=(int)(input('digite un numero: '))
+lista=[]
+ent=abs(ent)
+
+
+
+#guardarlo en lista de manera, lógica matemática 
+while (ent>=10):
+    res=ent%10
+    lista.append(res)
+    ent=ent//10
+lista.append(ent)
+
+lista2=[]
+
+for i in range (0,len(lista)):
+    lista2.append(lista[-i-1])#guardar la lista en setido contrario 
+cont=0
+lis=[]    
+for i in range (0,len(lista2)):# Este paso es muy importante 
+    # acá vamos a utilizar el cont=0 y colocamos dos condicionales
+    #el primero, si el cinco se encuentra el el lugar de lista2[i]
+    # entonces cont=1 y va aumentado a medida que los 5 sigan apareciendo
+    #se coloca otro condicional if para que no vuela a sumar el posbile cinco 
+    #de inicio.
+ 
+    if lista2[i]==5:
+        cont=cont+1
+        if i==len(lista2)-1:
+            lis.append(cont)
+    else:
+        if cont !=0:
+            lis.append(cont)
+            cont=0
+
+m=0
+n=0
+lu=sorted(lis)# Este paso es muy importante, se van a sumar los los numeros 
+#de la lista que guardo los cincos con excepción de 1
+for j in range (0,len(lu)):
+    x=lu[j]
+    if (x>1):
+        m=m+x
+        n=n+1                
+    
+print("la lista de 5 consecutivos es",lis,"El número de 5 cosecutivos es",m)
+
