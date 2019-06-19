@@ -1,0 +1,18 @@
+matriz=[]
+mat=[]
+l=[]
+li=[]
+filas = int(input("Cantidad de Filas:"))
+columnas= int(input("Cantidad de Colomnas"))
+
+for i in range (filas):
+    matriz.append([0]*columnas)
+    mat.append([0]*columnas)
+for j in range (filas):
+    for c in range(columnas):
+         matriz[c][j] = int(input("Elemento %d,%d:"%(j,c)))
+         mat[j][c] = matriz[c][j]
+       
+print("Matriz ingresada",mat)
+print("Matriz girada 90 grados",matriz)
+
